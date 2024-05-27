@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+   position: relative;
+   top: 50%;
+   left: 0;
+    
+}
+#sc{
+    height: 400px;
+    width: 400px;
+    
+   position: absolute;
+   left: 72%;
+   border-color: black;
+   border-radius: 50%;
+ 
+}
+.cal{
+    position: absolute;
+    top: 20%;
+    margin: 10%;
+    width: 300px;
+    height: 450px;
+    background-color:#000;
+    border-radius: 10px;
+    border: 20px;
+    justify-content: center;
+    text-align: center;
+    
+}
+.screem1{
+    margin-top: 40px;
+    margin-left: 10px;
+    
+   width: -110px;
+    font-size: 50px;
+}
+#screen1{
+    padding-right:110px ;
+    padding-top: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+.but{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: rgb(108, 98, 98);
+    border: 0;
+    cursor: pointer;
+}
+.bu{
+    position: absolute;
+    left: 3%;
+    top: 75%;
+}#bu1{
+    padding: 5px 15px 5px 15px;
+    border-radius: 10px;
+    border-width: 0;
+    background: greenyellow;
+    font-weight: bold;
+}
+#bu2{
+    padding:5px 35px 5px 35px;
+    border-width: 2px;
+    border-radius: 10px;
+}
+.screem11{
+width: 160px;
+background-color: black;
+color: white;
+border: none;
+}
+#cbu{
+    float: left;
+    margin-right: 190px;
+    margin-left: 28px;
+}
+
+
+
+</style>
+<body>
+    <div class="cal">
+        <div class="screem1">
+            <input type="text" style="font-size: 30px;" placeholder="0" id="screen1" class="screem11" style="font-size: 20px;" readonly> 
+        </div>
+        <div class="row">
+            <button class="but" id="cbu" style="background: rgb(255, 0, 0);color: white;" onclick="screenDIs='';
+            document.querySelector('#screen1').value=screenDIs;">C</button>
+        </div>
+        <div class="row">
+            <button class="but" onclick="screenDIs=screenDIs+'7';
+             document.querySelector('#screen1').value=screenDIs;">7</button>
+            <button class="but" onclick="screenDIs=screenDIs+'8';
+             document.querySelector('#screen1').value=screenDIs;">8</button>
+            <button class="but" onclick="screenDIs=screenDIs+'9';
+             document.querySelector('#screen1').value=screenDIs;">9</button>
+            <button class="but" style="background: orange;color: white;" onclick="screenDIs=screenDIs+'/';
+            document.querySelector('#screen1').value=screenDIs;">/</button>
+        </div>
+        <div class="row">
+            <button class="but" onclick="screenDIs=screenDIs+'4';
+             document.querySelector('#screen1').value=screenDIs;">4</button>
+            <button class="but" onclick="screenDIs=screenDIs+'5';
+             document.querySelector('#screen1').value=screenDIs;">5</button>
+            <button class="but" onclick="screenDIs=screenDIs+'6';
+             document.querySelector('#screen1').value=screenDIs;">6</button>
+            <button class="but" style="background: orange;color: white;" onclick="screenDIs=screenDIs+'*';
+            document.querySelector('#screen1').value=screenDIs;">x</button>
+        </div>
+        <div class="row">
+            <button class="but" onclick="screenDIs=screenDIs+'1';
+             document.querySelector('#screen1').value=screenDIs;">1</button>
+            <button class="but" onclick="screenDIs=screenDIs+'2';
+             document.querySelector('#screen1').value=screenDIs;">2</button>
+            <button class="but" onclick="screenDIs=screenDIs+'3';
+             document.querySelector('#screen1').value=screenDIs;">3</button>
+            <button class="but" style="background: orange;color: white;" onclick="screenDIs=screenDIs+'-';
+            document.querySelector('#screen1').value=screenDIs;">-</button>
+        </div>
+        <div class="row">
+            <button class="but" onclick="screenDIs=screenDIs+'.';
+            document.querySelector('#screen1').value=screenDIs;">.</button>
+            <button class="but" onclick="screenDIs=screenDIs+'0';
+             document.querySelector('#screen1').value=screenDIs;">0</button>
+            <button class="but" onclick="screenDIs=screenDIs+'+';
+            document.querySelector('#screen1').value=screenDIs;">+</button>
+            <button class="but" style="background: orange;color: white;" onclick="
+            let result = eval(screenDIs);
+            screenDIs=result;
+            document.querySelector('#screen1').value=screenDIs;">=</button>
+        </div>
+         <div class="new12">
+           
+    </div>
+</body>
+</html>
